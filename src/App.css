@@ -1,64 +1,149 @@
+/* Definindo o estilo do corpo da página */
 body {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0); /* Cor de fundo preta */
 }
-.header{
-  background-color: rgb(0, 0, 0);
-  display: flex;
-  padding-bottom: 20px;
-  padding-top: 0px;
-  text-align: center;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 0 5px white, /* Brilho fraco */
-              0 0 10px white, /* Brilho médio */
-              0 0 15px white; /* Brilho forte */
-}
-.logo{
-  padding-left: 25px;
-}
-.logo2{
-  padding-right: 25px;
 
+/* Estilo do cabeçalho */
+.header {
+  background-color: rgb(0, 0, 0); /* Cor de fundo preta */
+  display: flex; /* Flexbox para layout */
+  padding-bottom: 10px; /* Espaçamento inferior */
+  text-align: center; /* Centraliza o texto */
+  align-items: center; /* Alinha verticalmente os itens */
+  justify-content: space-between; /* Espaço entre os itens */
+  box-shadow: 
+    0 0 5px white, /* Brilho fraco */
+    0 0 10px white, /* Brilho médio */
+    0 0 15px white; /* Brilho forte */
 }
+
+/* Estilo da primeira logo */
+.logo {
+  padding-left: 25px; /* Espaçamento à esquerda */
+}
+
+/* Estilo da segunda logo */
+.logo2 {
+  padding-right: 25px; /* Espaçamento à direita */
+}
+
+/* Estilo geral para imagens */
 img {
-  padding-top: 40px;
+  padding-top: 20px; /* Espaçamento superior */
+  padding-bottom: 10px; /* Espaçamento inferior */
 }
-h1{
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 45px;
-  padding-right: 370px;
-  font-family:'Times New Roman', Times, serif;
-}
-.neon-text {
-  font-size: 4em;
-  color: rgb(255, 255, 255); /* Cor principal do texto neon */
-  text-align: center;
-  padding-top: 30px;
-  font-weight: bold;
-  animation: pulse 4s infinite; /* Animação pulsando continuamente */
-  font-family: Arial, sans-serif;
+
+/* Estilo do título principal */
+h1 {
+  color: rgb(255, 255, 255); /* Cor do texto branco */
+  display: flex; /* Flexbox para layout */
+  align-items: center; /* Alinha verticalmente os itens */
+  justify-content: center; /* Centraliza horizontalmente */
+  text-align: center; /* Centraliza o texto */
+  font-size: 45px; /* Tamanho da fonte */
+  font-family: 'Times New Roman', Times, serif; /* Fonte do texto */
   text-shadow: 
     0 0 5px rgb(255, 255, 255),  /* Brilho fraco perto do texto */
     0 0 10px rgb(255, 255, 255), /* Brilho médio */
     0 0 20px rgb(255, 255, 255), /* Brilho forte */
-    0 0 40px rgb(255, 255, 255), /* Brilho externo, adicionando outra cor */
-    0 0 80px rgb(0, 0, 0), /* Brilho mais difuso */
+    0 0 40px rgb(255, 255, 255), /* Brilho externo */
+    0 0 80px rgb(0, 0, 0), /* Brilho difuso */
     0 0 90px rgb(0, 0, 0); /* Brilho final */
-
 }
+
+/* Estilo do contêiner de conteúdo */
+.content {
+  display: flex; /* Flexbox para layout */
+  justify-content: space-between; /* Espaço entre os itens */
+  padding: 25px; /* Espaçamento interno */
+  gap: 30px; /* Espaçamento entre os elementos filhos */
+}
+
+/* Estilo dos boxes de culto */
+.box1, .box2, .box3 {
+  padding: 150px; /* Espaçamento interno */
+  display: flex; /* Flexbox para layout */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Alinha verticalmente */
+  text-align: center; /* Centraliza o texto */
+  box-shadow: 
+    0 0 3px white, /* Brilho fraco */
+    0 0 5px white, /* Brilho médio */
+    0 0 10px white; /* Brilho forte */
+  position: relative; /* Necessário para o pseudo-elemento */
+  overflow: hidden; /* Impede que o pseudo-elemento transborde */
+}
+
+/* Estilo para a imagem de fundo dos boxes */
+.box1::before, .box2::before, .box3::before {
+  content: ''; /* Necessário para criar o pseudo-elemento */
+  position: absolute; /* Posiciona o elemento absolutamente */
+  top: 0; /* Início no topo */
+  left: 0; /* Início à esquerda */
+  right: 0; /* Estende até a direita */
+  bottom: 0; /* Estende até o fundo */
+  background-size: cover; /* Faz a imagem cobrir todo o elemento */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  opacity: 0.3; /* Opacidade do fundo */
+  z-index: 1; /* Certifica que o fundo fique abaixo do texto */
+}
+
+/* Especificando as imagens de fundo para cada box */
+.box1::before {
+  background-image: url(/public/box1.png); /* Imagem para box1 */
+}
+.box2::before {
+  background-image: url(/public/box2.png); /* Imagem para box2 */
+}
+.box3::before {
+  background-image: url(/public/box3.png); /* Imagem para box3 */
+}
+
+/* Estilo para o texto dentro dos boxes */
+.text-box {
+  position: relative; /* Permite que o texto fique acima do pseudo-elemento */
+  color: rgb(255, 255, 255); /* Cor do texto branco */
+  text-shadow: 
+    0 0 5px rgb(255, 255, 255), 
+    0 0 10px rgb(255, 255, 255), 
+    0 0 20px rgb(255, 255, 255), 
+    0 0 40px rgb(255, 255, 255), 
+    0 0 80px rgb(0, 0, 0), 
+    0 0 90px rgb(0, 0, 0); 
+  font-weight: 800; /* Peso da fonte */
+  font-size: 24px; /* Tamanho da fonte */
+  white-space: nowrap; /* Impede que o texto quebre */
+  z-index: 2; /* Certifica que o texto fique acima do fundo */
+}
+
+/* Estilo do texto em neon */
+.neon-text {
+  font-size: 4em; /* Tamanho do texto neon */
+  color: rgb(255, 255, 255); /* Cor do texto neon */
+  text-align: center; /* Centraliza o texto */
+  padding-top: 30px; /* Espaçamento superior */
+  font-weight: bold; /* Peso da fonte */
+  animation: pulse 4s infinite; /* Animação pulsando continuamente */
+  font-family: Arial, sans-serif; /* Fonte do texto */
+  text-shadow: 
+    0 0 5px rgb(255, 255, 255), /* Brilho fraco perto do texto */
+    0 0 10px rgb(255, 255, 255), /* Brilho médio */
+    0 0 20px rgb(255, 255, 255), /* Brilho forte */
+    0 0 40px rgb(255, 255, 255), /* Brilho externo */
+    0 0 80px rgb(0, 0, 0), /* Brilho difuso */
+    0 0 90px rgb(0, 0, 0); /* Brilho final */
+}
+
+/* Animação para o efeito de pulsação do texto */
 @keyframes pulse {
   0% {
-    transform: scale(1);
-
+    transform: scale(1); /* Escala inicial */
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Aumenta a escala */
   }
   100% {
-    transform: scale(1);
+    transform: scale(1); /* Retorna à escala original */
   }
 }

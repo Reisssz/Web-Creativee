@@ -1,5 +1,9 @@
 // Importando estilos e bibliotecas necessárias
 import './App.css'; // Importa o CSS para estilização
+import Header from './components/header';
+import Cultos from './components/cultos';
+import Sobre from './components/sobre';
+import Footer from './components/footer';
 import React from 'react'; // Importa o React
 import Slider from 'react-slick'; // Importa o componente Slider da biblioteca react-slick
 import "slick-carousel/slick/slick.css"; // Estilos para o carrossel
@@ -40,43 +44,12 @@ const Carousel = () => {
 function App() {
   return (
     <div className="App"> {/* Contêiner principal */}
-      <header className="header"> {/* Cabeçalho da aplicação */}
-        <img className="logo" src="logo.png" width="118px" alt="Logo" /> {/* Logo principal */}
-        <div className='neon-text'>SERVIR POR ALGO MAIOR</div> {/* Texto em neon */}
-        <img className="logo2" src="lagoinha.png" width="120px" alt="Logo2" /> {/* Segundo logo */}
-      </header>
 
+      <Header />  {/* Incluindo o header no App */}
       <Carousel /> {/* Incluindo o carrossel no App */}
-
-      <h1>CULTOS</h1> {/* Título da seção */}
-
-      <div className="content"> {/* Contêiner para os boxes de culto */}
-        <div className='box1'>
-          <div className='text-box'>WORSHIP NIGHT</div> {/* Box 1 com texto */}
-        </div>
-        <div className='box2'>
-          <div className='text-box'>CULTO FÉ</div> {/* Box 2 com texto */}
-        </div>
-        <div className='box3'>
-          <div className='text-box'>CULTO LEGACY</div> {/* Box 3 com texto */}
-        </div>
-        <div className='box4'>
-          <div className='text-box'>ESCOLA BIBLICA</div> {/* Box 4 com texto */}
-        </div>
-      </div>
-
-      <div className='content2'>
-        <div className='sobre'>
-          <h1>SOBRE</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-        </div>
-      </div>
-
-        <footer>
-
-          <h2>Rights Reserved. 2024 Created By Pedro Venetillo Reis</h2>
-          
-        </footer>
+      <Cultos />  {/* Incluindo os cultos no App */}
+      <Sobre /> {/* Incluindo o sobre no App */}
+      <Footer />  {/* Incluindo o footer no App */}
 
     </div>
 

@@ -7,7 +7,7 @@ function Cultos() {
                     <div className="text-box">WORSHIP NIGHT</div> {/* Box 1 com texto */}
                 </div>
                 <div className="box2">
-                    <div className="text-box">CULTO FÉ</div> {/* Box 2 com texto */}
+                    <div className="text-box">CULTO FÉ</div> {/* Box 2 com texto  */}
                 </div>
                 <div className="box3">
                     <div className="text-box">CULTO LEGACY</div> {/* Box 3 com texto */}

@@ -47,7 +47,7 @@ function App() {
 
       <Header />  {/* Incluindo o header no App */}
       <Carousel /> {/* Incluindo o carrossel no App */}
-      <Cultos />  {/* Incluindo os cultos no App */}
+      <Cultos />  {/* Incluindo os cultos no App*/}
       <Sobre /> {/* Incluindo o sobre no App */}
       <Footer />  {/* Incluindo o footer no App */}
 
